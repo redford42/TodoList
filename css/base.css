@@ -1,0 +1,151 @@
+*{
+    /*background: rgba(0,0,0,.1);*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background .1s;
+    -moz-transition: background .1s;
+    -ms-transition: background .1s;
+    -o-transition: background .1s;
+    transition: background .1s;
+}
+body{
+    background: #00484b;
+    color:white;
+}
+.container{
+    max-width: 900px;
+    margin:0 auto;
+    position: relative;
+}
+h1{
+    text-align: center;
+}
+
+.tasks-list{
+    margin:10px 0;
+}
+
+input,
+.task-item,
+.task-detail-mask,
+button,
+textarea
+{
+    border-radius: 5px;
+    padding: 10px;
+}
+textarea,
+input[type=text],
+input[type=date],
+button
+{
+    border: 0;
+}
+textarea{
+    min-height: 100px;
+}
+textarea,
+input[type=text],[type=date]{
+
+    display: block;
+    width:100%;
+    background: #ddd;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.3);
+}
+textarea:hover,
+input[type=text]:hover,
+input[type=date]:hover,
+input[type=text]:focus,
+input[type=date]:focus{
+    border: 0;
+    display: block;
+    width:100%;
+    background: #eeeeee;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+button{
+    display: inline-block;
+    cursor: pointer;
+    color: #333;
+    border: 0;
+}
+
+.add-task input[type=text]{
+    float: left;
+    width: 84%;
+    margin-right: 1%;
+}
+.add-task button[type=submit]:hover{
+    background: #bffb7c;
+    width: 15%;
+}
+
+.add-task button[type=submit]{
+    background: #9fe057;
+    width: 15%;
+}
+.add-task [type=submit],
+.task-item{
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, .4) ;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .4) ;
+}
+.task-item{
+    padding: 10px;
+    background: white;
+    color: #333;
+    margin-bottom: 2px;
+    border-radius: 5px;
+   
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    -moz-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    cursor: pointer;
+
+
+}
+
+.task-item:hover{
+    background: #ddd;
+}
+
+.task-detail-mask,
+.task-detail{
+    display: none;
+    position: absolute;
+
+}
+
+.task-detail{
+    background: #fff;
+    color: #333;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+.task-detail .content{
+    padding: 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.task-detail > *{
+    margin-bottom: 10px;
+}
+.task-detail-mask{
+    top: 0;
+    bottom:0;
+    right: 0;
+    left:0;
+    background:rgba(30,30,30,.6);
+}
