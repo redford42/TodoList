@@ -13,10 +13,13 @@ body{
     background: #00484b;
     color:white;
 }
+
+
 .container{
     max-width: 900px;
     margin:0 auto;
     position: relative;
+    padding: 0 10px;
 }
 h1{
     text-align: center;
@@ -148,4 +151,20 @@ button{
     right: 0;
     left:0;
     background:rgba(30,30,30,.6);
+}
+
+.task-content{
+    margin-left: 10px;
+}
+
+.action{
+    color: #888;
+    font-size: 90%;
+}
+.action:hover{
+    color: #333;
+}
+
+.fr{
+    float: right;
 }
