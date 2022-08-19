@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<title>My Todo App</title>
 	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-	<link rel="stylesheet" href="css/base.css">
+
+	<!-- <link rel="stylesheet" href="css/base.css"> -->
+
+	<!-- added this for tailwind css output -->
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-	<div class="container">
-		<h1>Add a Todo</h1>
-		<div class="add-task">
-
-			<input type="text" name="content" placeholder="e.g. Let's go steal a blog!" autofocus autocomplete="off">
-			<button type="submit" id="btn_add">submit</button>
-
+<body class="bg-primary awesome-scroll">
+	<div class="max-w-[75%] min-w-[50%] mx-auto">
+		<h1 class="text-center text-slate-50 text-3xl font-bold mt-10 mb-5">Add a Todo</h1>
+		<div class=" w-full add-task">
+		<form onsubmit="(e)=>{e.preventDefault()}" class="h-10 flex justify-between">
+			<input type="text" name="content" placeholder="e.g. Let's go steal a blog!" autofocus autocomplete="off" class="grow-[2] mr-2 px-4 rounded-sm focus-visible:outline-primary text-primary">
+			<button type="submit" id="btn_add" class="bg-white hover:bg-slate-50 active:bg-slate-200 text-primary px-2 h-full text-lg tracking-wider rounded-md font-semibold" onfocus="$('.add-task input').focus()">SUBMIT</button>
+		</form>
 		</div>
-		<div class="tasks-list">
+		<div class="tasks-list pt-4 mx-auto w-[75%]">
 		</div>
 
 		<!--When the task details are clicked by clicks--->
 		<div class="task-detail-mask"></div>
 		<div class="task-detail">
 			<!--Mission details start-->
-			<div>
+			<div class="hidden">
 				<div class="content">
 					<!--TitleStarting -->
-					let's go steal a blog!
 				</div>
 				<!--The title of the task is ends-->
 				<div>
