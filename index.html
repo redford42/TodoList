@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
 	<meta charset="UTF-8">
 	<title>My Todo App</title>
 	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
 	<link rel="stylesheet" href="css/base.css">
 </head>
+
 <body>
-<div class="container">
-	<h1>Add a Todo</h1>
-	<div class="add-task">
+	<div class="container">
+		<h1>Add a Todo</h1>
+		<div class="add-task">
 
-		<input type="text"
-		       name="content"
-		       placeholder="e.g. Let's go steal a blog!"
-		       autofocus
-		       autocomplete="off">
-		<button type="submit" id="btn_add">submit</button>
+			<input type="text" name="content" placeholder="e.g. Let's go steal a blog!" autofocus autocomplete="off">
+			<button type="submit" id="btn_add">submit</button>
 
-	</div>
-	<div class="tasks-list">
-	</div>
-
-	<!--When the task details are clicked by clicks--->
-	<div class="task-detail-mask"></div>
-	<div class="task-detail">  <!--Mission details start-->
-		<div>
-			<div class="content">  <!--TitleStarting -->
-				let's go steal a blog!
-			</div><!--The title of the task is ends-->
-			<div><!--The task description begins-->
-				<div class="desc">
-					<textarea ></textarea>
-				</div>
-			</div>
-			<div class="remind">  <!--The task time reminder starts-->
-				<input type="date">
-			</div><!--The task time reminder is over-->
 		</div>
-	</div><!--The task description is over-->
+		<div class="tasks-list">
+		</div>
 
-	<!--Task details end-->
+		<!--When the task details are clicked by clicks--->
+		<div class="task-detail-mask"></div>
+		<div class="task-detail">
+			<!--Mission details start-->
+			<div>
+				<div class="content">
+					<!--TitleStarting -->
+					let's go steal a blog!
+				</div>
+				<!--The title of the task is ends-->
+				<div>
+					<!--The task description begins-->
+					<div class="desc">
+						<textarea></textarea>
+					</div>
+				</div>
+				<div class="remind">
+					<!--The task time reminder starts-->
+					<input type="date">
+				</div>
+				<!--The task time reminder is over-->
+			</div>
+		</div>
+		<!--The task description is over-->
 
-</div>  <!--Total container ends-->
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/store.js/store.js"></script>
-<script src="js/base.js"></script>
+		<!--Task details end-->
+
+	</div>
+	<!--Total container ends-->
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/store.js/store.js"></script>
+	<script src="js/base.js"></script>
 
 </body>
+
 </html>
