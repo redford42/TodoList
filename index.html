@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="css/base.css">
 </head>
 <body>
-<div class="container">      <!-- 总容器 -->
-	<h1>我的Todo</h1>
+<div class="container">
+	<h1>Add a Todo</h1>
 	<div class="add-task">
 
 		<input type="text"
@@ -19,37 +19,30 @@
 		<button type="submit" id="btn_add">submit</button>
 
 	</div>
-	<div class="tasks-list">  <!-- 清单列表开始 -->
-		<!--<div class="task-item">  &lt;!&ndash;任务开始&ndash;&gt;-->
-			<!--<span><input type="checkbox"></span>-->
-			<!--<span class="task-content">item content 1</span>-->
-			<!--<span>delete</span>-->
-			<!--<span>detail</span>-->
-		<!--</div>  &lt;!&ndash;任务结束&ndash;&gt;-->
-	</div>  <!-- 清单列表结束 -->
+	<div class="tasks-list">
+	</div>
 
-	<!--当任务详情被点击时遮盖其他的-->
+	<!--When the task details are clicked by clicks--->
 	<div class="task-detail-mask"></div>
-	<div class="task-detail">  <!-- 任务详情开始-->
+	<div class="task-detail">  <!--Mission details start-->
 		<div>
-			<div class="content">  <!-- 任务标题开始-->
-				let's go steal a todolist!
-			</div><!--任务标题结束-->
-			<div><!--任务描述开始-->
+			<div class="content">  <!--TitleStarting -->
+				let's go steal a blog!
+			</div><!--The title of the task is ends-->
+			<div><!--The task description begins-->
 				<div class="desc">
 					<textarea ></textarea>
 				</div>
 			</div>
-			<div class="remind">  <!--任务定时提醒开始-->
+			<div class="remind">  <!--The task time reminder starts-->
 				<input type="date">
-				<!--<button type="submit">submit</button>-->
-			</div><!-- 任务定时提醒结束-->
+			</div><!--The task time reminder is over-->
 		</div>
-	</div><!--任务描述结束-->
+	</div><!--The task description is over-->
 
-	<!-- 任务详情结束-->
+	<!--Task details end-->
 
-</div>  <!-- 总容器结束 -->
+</div>  <!--Total container ends-->
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/store.js/store.js"></script>
 <script src="js/base.js"></script>
