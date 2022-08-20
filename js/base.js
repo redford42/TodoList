@@ -1,5 +1,7 @@
+import showAlert from './Showalert.js'
 var _delete_button= `<svg class=" fill-white hover:fill-slate-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z"/></svg>`
 var _edit_button=  `<svg class=" fill-white hover:fill-slate-100 pl-[2px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 64C0 28.65 28.65 0 64 0H224V128C224 145.7 238.3 160 256 160H384V299.6L289.3 394.3C281.1 402.5 275.3 412.8 272.5 424.1L257.4 484.2C255.1 493.6 255.7 503.2 258.8 512H64C28.65 512 0 483.3 0 448V64zM256 128V0L384 128H256zM564.1 250.1C579.8 265.7 579.8 291 564.1 306.7L534.7 336.1L463.8 265.1L493.2 235.7C508.8 220.1 534.1 220.1 549.8 235.7L564.1 250.1zM311.9 416.1L441.1 287.8L512.1 358.7L382.9 487.9C378.8 492 373.6 494.9 368 496.3L307.9 511.4C302.4 512.7 296.7 511.1 292.7 507.2C288.7 503.2 287.1 497.4 288.5 491.1L303.5 431.8C304.9 426.2 307.8 421.1 311.9 416.1V416.1z"/></svg>`
+var prev_alert_timeout=null
 ;(function () {
 
     'use strict';
@@ -79,11 +81,12 @@ var _edit_button=  `<svg class=" fill-white hover:fill-slate-100 pl-[2px]" xmlns
         new_task.content = $input.val();
         /*如果输入内容为空 不执行直接返回*/
         if(!new_task.content){
-            alert('WHATS YOUR PROBLEM!');
-            return
+           prev_alert_timeout = showAlert('WHATS THE PROBLEM',3000,prev_alert_timeout);
+            return;
         }
         /*将新Task存入StoreJS*/
         if(add_task(new_task)) {
+            prev_alert_timeout = showAlert(`Added Todo ${new_task.content}`,1500,prev_alert_timeout)
             $input.val('');
         }
     }
@@ -101,6 +104,7 @@ var _edit_button=  `<svg class=" fill-white hover:fill-slate-100 pl-[2px]" xmlns
     function delete_task(index) {
         /*如果没有index或index在tasklist中不存在*/
         if(index == undefined || !task_list[index]) return;
+        prev_alert_timeout= showAlert('Deleted Successfully',3000,prev_alert_timeout)
         delete task_list[index];
         /*更新localStorage*/
         refresh_task_list();

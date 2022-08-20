@@ -1,3 +1,4 @@
 node_modules
 package-lock.json
 css/base.css
+tailwind.config.js

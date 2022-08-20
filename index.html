@@ -17,8 +17,8 @@
 		<h1 class="text-center text-slate-50 text-3xl font-bold mt-10 mb-5">Add a Todo</h1>
 		<div class=" w-full add-task">
 		<form onsubmit="(e)=>{e.preventDefault()}" class="h-10 flex justify-between">
-			<input type="text" name="content" placeholder="e.g. Let's go steal a blog!" autofocus autocomplete="off" class="grow-[2] mr-2 px-4 rounded-sm focus-visible:outline-primary text-primary">
-			<button type="submit" id="btn_add" class="bg-white hover:bg-slate-50 active:bg-slate-200 text-primary px-2 h-full text-lg tracking-wider rounded-md font-semibold" onfocus="$('.add-task input').focus()">SUBMIT</button>
+			<input type="text" name="content" placeholder="e.g. Let's go steal a blog!" autofocus autocomplete="off" class="grow-[2] mr-2 px-4 focus-visible:outline-primary text-primary">
+			<button type="submit" id="btn_add" class="bg-white hover:bg-slate-50 active:bg-slate-200 text-primary px-2 h-full text-lg tracking-wider rounded-sm font-semibold" onfocus="$('.add-task input').focus()">SUBMIT</button>
 		</form>
 		</div>
 		<div class="tasks-list pt-4 mx-auto w-[75%]">
@@ -51,11 +51,13 @@
 		<!--Task details end-->
 
 	</div>
+
+	<div class="absolute -top-16 w-full transition-transform duration-500" id="alert-box">
+	</div>
 	<!--Total container ends-->
 	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="node_modules/store.js/store.js"></script>
-	<script src="js/base.js"></script>
-
+	<script type="module" src="/js/base.js"></script>
 </body>
 
 </html>
