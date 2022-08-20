@@ -1,58 +1,63 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>My Todo App</title>
 	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-	<link rel="stylesheet" href="css/base.css">
-</head>
-<body>
-<div class="container">      <!-- 总容器 -->
-	<h1>我的Todo</h1>
-	<div class="add-task">
 
-		<input type="text"
-		       name="content"
-		       placeholder="e.g. Let's go steal a blog!"
-		       autofocus
-		       autocomplete="off">
-		<button type="submit" id="btn_add">submit</button>
+	<!-- <link rel="stylesheet" href="css/base.css"> -->
+
+	<!-- added this for tailwind css output -->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-primary awesome-scroll">
+	<div class="max-w-[75%] min-w-[50%] mx-auto">
+		<h1 class="text-center text-slate-50 text-3xl font-bold mt-10 mb-5">Add a Todo</h1>
+		<div class=" w-full add-task">
+		<form onsubmit="(e)=>{e.preventDefault()}" class="h-10 flex justify-between">
+			<input type="text" name="content" placeholder="e.g. Let's go steal a blog!" autofocus autocomplete="off" class="grow-[2] mr-2 px-4 focus-visible:outline-primary text-primary">
+			<button type="submit" id="btn_add" class="bg-white hover:bg-slate-50 active:bg-slate-200 text-primary px-2 h-full text-lg tracking-wider rounded-sm font-semibold" onfocus="$('.add-task input').focus()">SUBMIT</button>
+		</form>
+		</div>
+		<div class="tasks-list pt-4 mx-auto w-[75%]">
+		</div>
+
+		<!--When the task details are clicked by clicks--->
+		<div class="task-detail-mask"></div>
+		<div class="task-detail">
+			<!--Mission details start-->
+			<div class="hidden">
+				<div class="content">
+					<!--TitleStarting -->
+				</div>
+				<!--The title of the task is ends-->
+				<div>
+					<!--The task description begins-->
+					<div class="desc">
+						<textarea></textarea>
+					</div>
+				</div>
+				<div class="remind">
+					<!--The task time reminder starts-->
+					<input type="date">
+				</div>
+				<!--The task time reminder is over-->
+			</div>
+		</div>
+		<!--The task description is over-->
+
+		<!--Task details end-->
 
 	</div>
-	<div class="tasks-list">  <!-- 清单列表开始 -->
-		<!--<div class="task-item">  &lt;!&ndash;任务开始&ndash;&gt;-->
-			<!--<span><input type="checkbox"></span>-->
-			<!--<span class="task-content">item content 1</span>-->
-			<!--<span>delete</span>-->
-			<!--<span>detail</span>-->
-		<!--</div>  &lt;!&ndash;任务结束&ndash;&gt;-->
-	</div>  <!-- 清单列表结束 -->
 
-	<!--当任务详情被点击时遮盖其他的-->
-	<div class="task-detail-mask"></div>
-	<div class="task-detail">  <!-- 任务详情开始-->
-		<div>
-			<div class="content">  <!-- 任务标题开始-->
-				let's go steal a todolist!
-			</div><!--任务标题结束-->
-			<div><!--任务描述开始-->
-				<div class="desc">
-					<textarea ></textarea>
-				</div>
-			</div>
-			<div class="remind">  <!--任务定时提醒开始-->
-				<input type="date">
-				<!--<button type="submit">submit</button>-->
-			</div><!-- 任务定时提醒结束-->
-		</div>
-	</div><!--任务描述结束-->
-
-	<!-- 任务详情结束-->
-
-</div>  <!-- 总容器结束 -->
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/store.js/store.js"></script>
-<script src="js/base.js"></script>
-
+	<div class="absolute -top-16 w-full transition-transform duration-500" id="alert-box">
+	</div>
+	<!--Total container ends-->
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/store.js/store.js"></script>
+	<script type="module" src="/js/base.js"></script>
 </body>
+
 </html>

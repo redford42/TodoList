@@ -1,18 +1,18 @@
 # 2018/4/23
-		基本功能【添加，删除，详情，日期】功能已完成
-		emmmm纯粹的跟着敲了一遍，脑子里还是很糊
+Basic functions [Add, delete, details, date] Function has been completed
+Emmmm followed it purely, and my mind was still very confused.
 # 2018/4/14
-		完成了删除的JS
-		emmm进度很慢。
+Completed the deleted js
+EMMM progress is very slow.
 # 2018/4/13
-		完成了添加的JS
-		这个讲师十分钟里面五分钟在改bug。
-		变量不申明他能用我不能。
+Completed the added JS
+This lecturer is changing BUG for five minutes in ten minutes.
+The variable does not indicate that he can use me.
 # 2018/4/12
-    	完成HTML的搭建和CSS细化
-    	比想象中更有条理
+    Complete the construction of HTML and CSS refinement
+    More organized than expected
 
-# TodoList
-todolist write by jquery
+# Todolist
+Todolist write by jquery
 
-# 测试Git
+# Test git
